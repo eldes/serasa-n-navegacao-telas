@@ -1,11 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/Home';
-import Login from '../pages/Login';
+import LoginPage from '../pages/Login';
 
 const Principal = function() {
   return (
     <main>
-      <Login />
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
     </main>
   );
 };
